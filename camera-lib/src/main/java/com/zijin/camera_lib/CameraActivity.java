@@ -180,7 +180,7 @@ public class CameraActivity extends AppCompatActivity {
         for (int cameraId = 0; cameraId < numberOfCameras; cameraId++) {
             Camera.CameraInfo cameraInfo = new Camera.CameraInfo();
             Camera.getCameraInfo(cameraId, cameraInfo);
-            if (cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
+            if (cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
                 this.cameraId = cameraId;
                 this.cameraInfo = cameraInfo;
             }
@@ -390,7 +390,7 @@ public class CameraActivity extends AppCompatActivity {
         // 镜像翻转图像
         Matrix matrix = new Matrix();
         // todo 应根据获取帧的图像实时获取需要旋转的角度
-        matrix.postRotate(180);
+//        matrix.postRotate(180);
         matrix.postScale(-1, 1);
         Bitmap originalBitmap = ImageConvertUtil.nv21ToBitmap(data, previewSize.getLonger(), previewSize.getShorter());
         final Bitmap previewBitmap = Bitmap.createBitmap(originalBitmap, 0, 0, previewSize.getLonger(), previewSize.getShorter(), matrix, true);

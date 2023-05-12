@@ -33,7 +33,8 @@ public interface FaceService {
      * @param params
      * @return
      */
-    @POST("user-center/v2/validation/validateFace")
+//    @POST("user-center/v2/validation/validateFace")
+    @POST("open-api/v2/hikvision/getUserNo")
     Call<UserInfo> getUserInfo(@Header("Authorization") String authorization, @Body RequestBody params);
 
 

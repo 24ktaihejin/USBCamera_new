@@ -319,7 +319,7 @@ public class UsbFaceVerifyActivity extends AppCompatActivity {
         } else {
             DataPersistenceHelper.saveBase64Picture(this, faceBase64);
             DataPersistenceHelper.saveOriginalPicture(this, userInfoResult.getOriginalPhoto());
-//            userInfoResult.setOriginalPhoto(""); // 置空的目的是为了避免通过intent回传数据时的卡顿
+            userInfoResult.setOriginalPhoto(""); // 置空的目的是为了避免通过intent回传数据时的卡顿
             // 人脸校验成功
             Message message = Message.obtain();
             message.obj = userInfoResult;

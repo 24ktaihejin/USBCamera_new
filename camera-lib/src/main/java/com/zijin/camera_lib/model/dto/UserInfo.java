@@ -16,7 +16,7 @@ public class UserInfo {
     private String retMsg;
     private String tid;
     private String userNo;
-    private String userName;
+    private String username;
     private String postName;
     private String roleName;
     private String identity;
@@ -55,11 +55,11 @@ public class UserInfo {
     }
 
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     public void setUsername(String username) {
-        this.userName = username;
+        this.username = username;
     }
 
     public String getPostName() {
@@ -105,7 +105,7 @@ public class UserInfo {
                 ", retMsg='" + retMsg + '\'' +
                 ", tid='" + tid + '\'' +
                 ", userNo='" + userNo + '\'' +
-                ", userName='" + userName + '\'' +
+                ", userName='" + username + '\'' +
                 ", postName='" + postName + '\'' +
                 ", roleName='" + roleName + '\'' +
                 ", identity='" + identity + '\'' +

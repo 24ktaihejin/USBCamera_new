@@ -112,7 +112,7 @@ public class CameraSizeHelper {
                 break;
         }
         int result;
-        if (cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
+        if (cameraInfo.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
             result = (cameraInfo.orientation + degrees) % 360;
             result = (360 - result) % 360;  // compensate the mirror
         } else {  // back-facing
